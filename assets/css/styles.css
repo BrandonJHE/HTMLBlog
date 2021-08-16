@@ -96,7 +96,6 @@ body {
     /*line-height: 320px;*/
     color: white;
     text-shadow: 0px 0px 5px #444;
-
     /*DEGRADADO CSS*/
     background: rgba(73,155,234,1);
     background: -moz-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(81,175,247,1) 100%);
@@ -444,7 +443,7 @@ textarea{
 #header {
     height: 120px;
     width: 100%;
-    background: white;
+    background: lightseagreen;
     border-bottom: 1px solid #ccc;
     border-top: 5px solid #61dafb;
 }
@@ -474,6 +473,20 @@ textarea{
     margin-right: -10px;
     animation: girar infinite 30s linear;
 }
+
+@keyframes sacudir {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
 
 @keyframes girar {
     from {
@@ -518,7 +531,8 @@ textarea{
 
 
 #menu a:hover{
-    color: #3cb2d3;
+    /*color: #3cb2d3;*/
+    color: #60dafa;
 }
 
 #slider{
@@ -527,9 +541,9 @@ textarea{
     /*line-height: 320px;*/
     color: white;
     text-shadow: 0px 0px 5px #444;
-
     /*DEGRADADO CSS*/
-    background: rgba(73,155,234,1);
+    background: lightsalmon;
+    /*
     background: -moz-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(81,175,247,1) 100%);
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(81,175,247,1)));
     background: -webkit-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(81,175,247,1) 100%);
@@ -537,6 +551,9 @@ textarea{
     background: -ms-radial-gradient(center, ellipse cover, rgba(73,155,234,1) 0%, rgba(81,175,247,1) 100%);
     background: radial-gradient(ellipse at center, rgba(73,155,234,1) 0%, rgba(81,175,247,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#51aff7', GradientType=1 );
+    */
+    background-image: url("../images/MenernosGIF.gif");
+   
 }
 
 #slider h1{
@@ -544,6 +561,8 @@ textarea{
     padding: 0px;
     padding-top: 130px;
     text-align: center;
+    animation: sacudir 0.5s;
+    animation-iteration-count: 1;
 }
 
 .btn-white{
@@ -568,6 +587,7 @@ textarea{
 .btn-white:hover{
     background: #444;
     color:white;
+    transform: scale(1.5);
 }
 
 #slider.slider-small{
@@ -696,7 +716,7 @@ textarea{
 .article-item{
     width: 100%;
     border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-top: 20px;
     text-align: left;
 }
@@ -733,7 +753,7 @@ textarea{
     display: block;
     color: #444;
     text-decoration: none;
-    margin-top: 10px;
+    margin-top: 44px;
 }
 
 .article-item a:hover{
